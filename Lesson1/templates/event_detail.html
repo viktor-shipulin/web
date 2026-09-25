@@ -10,6 +10,9 @@
 <main class="container my-5">
     <a href="/" class="btn btn-outline-secondary btn-sm mb-4">← Назад</a>
     <h1 class="mb-3">{{ event.title }}</h1>
+    {% if event.poster %}
+    <img src="{{ event.poster.url }}" class="img-fluid rounded mb-4" alt="{{ event.title }}">
+    {% endif %}
     <p class="text-muted">{{ event.summary }}</p>
     <p>{{ event.description }}</p>
     <p><strong>Дата:</strong> {{ event.starts_at }}</p>

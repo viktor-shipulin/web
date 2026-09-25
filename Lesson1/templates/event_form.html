@@ -10,7 +10,7 @@
 <main class="container my-5" style="max-width: 640px;">
     <a href="/" class="btn btn-outline-secondary btn-sm mb-4">← Назад</a>
     <h1 class="mb-4">{{ title }}</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-success">Сохранить</button>

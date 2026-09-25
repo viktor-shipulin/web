@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +24,9 @@
         {% for ev in events %}
         <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm">
+                {% if ev.poster %}
+                <img src="{{ ev.poster.url }}" class="card-img-top" alt="{{ ev.title }}" style="height: 200px; object-fit: cover;">
+                {% endif %}
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">{{ ev.title }}</h5>
                     <p class="card-text">{{ ev.description }}</p>
